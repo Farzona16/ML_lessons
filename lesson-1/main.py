@@ -30,7 +30,7 @@ df['deck'].fillna(df['deck'].mode().iloc[0],inplace=True)
 print(df.isnull().sum().sort_values(ascending=False))
 
 import matplotlib.pyplot as plt
-sn.histplot(df['age'], kde=True)
+sn.histplot(df['age'], kde=True) #type: ignore
 plt.show()
 sn.countplot(x='sex',data=df)
 plt.show()
